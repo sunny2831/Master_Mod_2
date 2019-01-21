@@ -1,0 +1,7 @@
+<h1>Welcome <%= @user.username %> to Michelin Meals </h1>
+
+<%= link_to 'See all posts', posts_path %>
+
+<%= form_tag '/logout', method: "post" do %>
+  <%= submit_tag "Sign Out" %>
+<% end %>
