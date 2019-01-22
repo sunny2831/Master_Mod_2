@@ -1,0 +1,6 @@
+<%= form_for @post, html: {multipart: true} do |f| %>
+<%= f.text_field :title %>
+<%= f.text_area :recipe %>
+<%= f.file_field :img_url %>
+<%= f.submit "Create Post" %>
+<% end %>
