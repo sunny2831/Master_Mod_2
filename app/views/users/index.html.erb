@@ -1,5 +1,9 @@
+<h1>Please Sign Up</h1>
 
 <%= form_for @user do |f| %>
   <%= f.text_field :username %>
-  <%= f.submit "Log in" %>
+  <%= f.text_field :password %>
+  <%= f.submit "Sign up" %>
 <% end %>
+
+<%= link_to 'Click here if you are an existing user', '/login' %>

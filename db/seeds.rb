@@ -6,6 +6,11 @@ require 'pry'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Post.delete_all
+User.delete_all
+Comment.delete_all
+
 posts = [
   {title: "New Years Menu" , recipe: "a", img_url: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"},
   {title: "Easter Feast" , recipe: "b", img_url: "https://images.unsplash.com/photo-1546960920-cbebc0d517b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"},
@@ -29,6 +34,8 @@ users = [
 ]
 
 
+users.each {|user| User.create(user)}
+
 posts.each {|post|
   # binding.pry
   Post.create(
@@ -39,7 +46,7 @@ posts.each {|post|
   )
 }
 
-users.each {|user| User.create(user)}
+
 
 comment_contents = comments.map{|comment| comment[:content]}
 

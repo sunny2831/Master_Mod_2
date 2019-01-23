@@ -1,12 +1,23 @@
-class SessionsController < ApplicationController
-  def index
 
+
+class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
+  def new
+    @user = User.new 
   end
 
   def create
-    binding.pry
-    # @user = User.create()
-    # session[:name] = params[:username]
-    # redirect_to '/user/show'
+    user = User.find_by(username: params[:username])
+    if user && user.authenticate(params[:password])
+      session[:id] = user.id
+      redirect_to user_path(user)
+    else
+      byebug
+      flash[:errors] = ["invalid username or password"]
+      redirect_to '/login'
+    end
   end
+
+
 end

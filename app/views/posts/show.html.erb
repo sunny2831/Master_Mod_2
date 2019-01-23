@@ -3,7 +3,55 @@
 <p> <%= @post.recipe %> </p>
 
 <div>
-  <%= @post.img_url.thumb.url %>
+  <img src="<%= @post.img_url %>" alt="" height="500" width="500">
 </div>
 
-<p> Recipe by <%= @post.user  %> </p>
+<p> Recipe by <%= @post.user.username  %> </p>
+
+
+
+
+
+
+
+
+
+<% @post.comments.each do |c| %>
+<div class="ui comments">
+  <h3 class="ui dividing header">Comments</h3>
+  <div class="comment">
+    <a class="avatar">
+      <img src= <%= c.user.img_url %>>
+    </a>
+    <div class="content">
+      <a class="author"> <%= c.user.username %>  </a>
+      <div class="metadata">
+        <span class="date"> <%= Time.now.strftime('%c') %> </span>
+      </div>
+      <div class="text">
+        <%= c.content %>
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+  <form class="ui reply form" action="/comments" method="post">
+    <div class="field">
+      <input type="text" name="content">
+      <!-- <textarea> -->
+      <input type="hidden" name="post_id" value= <%= @post.id %>>
+
+
+
+
+      <!-- </textarea> -->
+    </div>
+    <div class="ui blue labeled submit icon button">
+      <i class="icon edit"></i> <input type="submit" name="submit" value="Add Comment">
+
+    </div>
+  </form>
+</div>
