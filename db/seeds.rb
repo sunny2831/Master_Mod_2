@@ -12,7 +12,7 @@ User.delete_all
 Comment.delete_all
 
 posts = [
-  {title: "New Years Menu" , recipe: "a", img_url: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"},
+  {title: "New Years Menu" , recipe: "Blue Cheese Roast", img_url: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"},
   {title: "Easter Feast" , recipe: "b", img_url: "https://images.unsplash.com/photo-1546960920-cbebc0d517b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"},
   {title: "May day madness", recipe: "c", img_url: "https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2727&q=80"},
   {title: "Sizzling Summer Roast" , recipe: "d", img_url: "https://images.unsplash.com/photo-1530632789071-8543f47edb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"},
@@ -28,9 +28,9 @@ comments = [
 ]
 
 users = [
-  {username: "Aquaria", img_url: "https://images.unsplash.com/photo-1516562313534-8f1d36ddd981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"},
-  {username: "Jinxx Monsoon", img_url: "https://images.unsplash.com/photo-1533552755457-5b471cb2ab11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"},
-  {username: "Violet Chachki", img_url: "https://images.unsplash.com/photo-1538090980822-9f3b7fe8d2ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80"}
+  {username: "Aquaria", img_url: "https://images.unsplash.com/photo-1516562313534-8f1d36ddd981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", password: "aquaria"},
+  {username: "Jinxx Monsoon", img_url: "https://images.unsplash.com/photo-1533552755457-5b471cb2ab11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", password: "jinxx"},
+  {username: "Violet Chachki", img_url: "https://images.unsplash.com/photo-1538090980822-9f3b7fe8d2ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80", password:"violet"}
 ]
 
 
@@ -58,3 +58,6 @@ comment_contents.each {|comment_content|
     post_id: Post.all.sample.id
   )
 }
+
+binding.pry
+0
