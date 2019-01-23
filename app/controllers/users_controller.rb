@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def create
     # byebug
     @user = User.create(user_params)
+    @user.password = params[:user][:password]
     if @user.valid?
         session[:id] = @user.id
       redirect_to user_path(@user)

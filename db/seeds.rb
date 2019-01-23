@@ -28,9 +28,9 @@ comments = [
 ]
 
 users = [
-  {username: "Aquaria", img_url: "https://images.unsplash.com/photo-1516562313534-8f1d36ddd981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"},
-  {username: "Jinxx Monsoon", img_url: "https://images.unsplash.com/photo-1533552755457-5b471cb2ab11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"},
-  {username: "Violet Chachki", img_url: "https://images.unsplash.com/photo-1538090980822-9f3b7fe8d2ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80"}
+  {username: "Aquaria", img_url: "https://images.unsplash.com/photo-1516562313534-8f1d36ddd981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", password: "aquaria"},
+ {username: "Jinxx Monsoon", img_url: "https://images.unsplash.com/photo-1533552755457-5b471cb2ab11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", password: "jinxx"},
+ {username: "Violet Chachki", img_url: "https://images.unsplash.com/photo-1538090980822-9f3b7fe8d2ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80", password:"violet"}
 ]
 
 
