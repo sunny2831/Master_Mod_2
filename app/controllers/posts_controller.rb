@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  
+
   def index
     @user = User.find(session[:id])
     @posts = Post.all
@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 
   def show
     # byebug
+    @message = Message.new 
     @post = Post.find(params[:id])
   end
 

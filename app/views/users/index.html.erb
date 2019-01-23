@@ -1,8 +1,21 @@
-<h1>Please Sign Up</h1>
+
+<h1> Welcome to Michelin Meals</h1>
+
+<h2>Please Sign Up</h2>
 
 <%= form_for @user do |f| %>
+  <%= f.label :username %>
   <%= f.text_field :username %>
+  <br>
+  <br>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+  <br>
+  <br>
+  <%= f.label :password %>
   <%= f.text_field :password %>
+  <br>
+  <br>
   <%= f.submit "Sign up" %>
 <% end %>
 

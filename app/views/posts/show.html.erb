@@ -59,3 +59,15 @@
     </div>
   </form>
 </div>
+
+<% if flash[:message] %>
+  <%= flash[:message] %>
+<% end %>
+<h2>Send a private message to <%= @post.user.username %></h2>
+<%= form_for @message do |f| %>
+  <%= f.text_field :content %>
+  <%= f.hidden_field :sender_id, :value => session[:id] %>
+  <%= f.hidden_field :receiver_id, :value => @post.user.id %>
+  <%= f.hidden_field :post_id, :value => @post.id %>
+  <%= f.submit %>
+<% end %>

@@ -1,3 +1,5 @@
+
+
 <h1>Welcome to Michelin Meals <%= @user.username %> </h1>
 
 <p> <%= link_to 'See all posts', posts_path %> </p>
@@ -12,6 +14,42 @@
 
 <h2> My Food Blogs and Recipes </h2>
 
+
+<div class="ui card">
+  <div class="image">
+    <img src= <%= @user.img_url %>>
+  </div>
+  <div class="content">
+    <a class="header"> <%= @user.username %></a>
+    <div class="meta">
+      <span class="date"></span>
+    </div>
+    <div class="description">
+      We don't have a bio.
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      <%= @user.received_messages.count %> messages in your inbox
+    </a>
+  </div>
+</div>
+
 <% @user.posts.each do |post| %> </p>
 <li> <%= link_to post.title, post_path(post) %> </li>
 <% end %>
+
+<h2>My Received Messages:</h2>
+<ul>
+  <% @user.received_messages.each do |u| %>
+    <li><%= u.content %></li>
+  <% end %>
+</ul>
+
+<h2>My Sent Messages:</h2>
+<ul>
+  <% @user.sent_messages.each do |u| %>
+    <li><%= u.content %></li>
+  <% end %>
+</ul>
