@@ -10,7 +10,7 @@
 <%= form_for(@user, url: '/sessions', html: {method: "post"}) do |f| %>
   <%= f.text_field :username %>
   <%= f.password_field :password %>
-  <%= f.submit %>
+  <%= f.submit "Log in" %>
 <% end %>
 
 <% if flash[:errors] %>

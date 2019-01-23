@@ -1,3 +1,12 @@
+<header>
+  <nav>
+     <%= link_to "My Profile", user_path %>
+     <br>
+     <hr>
+     <%= link_to "Community Blogs", posts_path %>
+  </nav>
+</header>
+
 <h1> <%= @post.title %> </h1>
 
 <p> <%= @post.recipe %> </p>
@@ -7,11 +16,6 @@
 </div>
 
 <p> Recipe by <%= @post.user.username  %> </p>
-
-
-
-
-
 
 
 

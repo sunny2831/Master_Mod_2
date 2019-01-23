@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
+  
   def index
     @user = User.find(session[:id])
     @posts = Post.all
   end
 
   def new
+    @user = User.find(session[:id])
     @post = Post.new
   end
 

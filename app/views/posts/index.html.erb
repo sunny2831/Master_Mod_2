@@ -1,6 +1,10 @@
+<header>
+  <nav>
+     <%= link_to "My Profile", user_path(@user) %>
+  </nav>
+</header>
 
-
-<h1>Hi <%= @user.username %></h1>
+<h1>Hi <%= @user.username %>, here are all the posts from the Michelin Meals Community! </h1>
 
 <ul>
   <% @posts.all.each do |p| %>

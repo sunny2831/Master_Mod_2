@@ -1,9 +1,17 @@
-<h1>Welcome <%= @user.username %> to Michelin Meals </h1>
+<h1>Welcome to Michelin Meals <%= @user.username %> </h1>
 
-<%= link_to 'See all posts', posts_path %>
+<p> <%= link_to 'See all posts', posts_path %> </p>
 
-<%= form_tag '/logout', method: "post" do %>
-  <%= submit_tag "Sign Out" %>
-<% end %>
+  <p>
+    <%= form_tag '/logout', method: "post" do %>
+    <%= submit_tag "Sign Out" %>
+    <% end %>
+  </p>
 
 <%= link_to "Create New Post", new_post_path  %>
+
+<h2> My Food Blogs and Recipes </h2>
+
+<% @user.posts.each do |post| %> </p>
+<li> <%= link_to post.title, post_path(post) %> </li>
+<% end %>
