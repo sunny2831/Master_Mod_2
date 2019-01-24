@@ -1,4 +1,4 @@
-
+<div style="position: absolute;right:200px; top:200px">
 <h1> Welcome to Michelin Meals</h1>
 
 <h2>Please Sign Up</h2>
@@ -13,10 +13,11 @@
   <br>
   <br>
   <%= f.label :password %>
-  <%= f.text_field :password %>
+  <%= f.password_field :password %>
   <br>
   <br>
   <%= f.submit "Sign up" %>
 <% end %>
 
-<%= link_to 'Click here if you are an existing user', '/login' %>
+<%= link_to 'Click here if you are an existing user', '/login',:class => 'ui button',:style => 'position: absolute; right: 200px; top: 300px' %>
+</div>

@@ -13,8 +13,8 @@ Comment.delete_all
 
 posts = [
   {title: "New Years Menu" , recipe: "Blue Cheese Roast, go to the supermarket find that infamous blue cheese (well known for it's smell) slice up the cheese, roast your veggies and serve with wine", img_url: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"},
-  {title: "Easter Feast" , recipe: "b", img_url: "https://images.unsplash.com/photo-1546960920-cbebc0d517b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"},
-  {title: "May day madness", recipe: "c", img_url: "https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2727&q=80"},
+  {title: "Easter Feast" , recipe: "Cranberries Chees Bacon and Pretzels, it really can't get any better than this honestly!", img_url: "https://images.unsplash.com/photo-1546960920-cbebc0d517b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"},
+  {title: "May day madness", recipe: "No need for GBK when you have the ability to create the same at your fingertips. Follow me on MySpace for the full recipe Guys!", img_url: "https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2727&q=80"},
   {title: "Sizzling Summer Roast" , recipe: "It's summer time and we want to cook up a roast once again, how about mushrooms and cilantro, tastes delish! I promise!", img_url: "https://images.unsplash.com/photo-1530632789071-8543f47edb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"},
   {title: "Christmas miracle", recipe: "Christmas is just so much better with fritattas!", img_url: "https://images.unsplash.com/photo-1534026744023-08fc40918b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"}
 ]

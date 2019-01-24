@@ -6,7 +6,7 @@
 <br>
 <div class="field">
 <label>Recipe</label>
-<%= f.text_area :recipe, class: "form-control" %>
+<%= f.text_area :recipe, class: "form-control", :width => '200px' %>
 </div>
 <br>
 <div class="field">
@@ -18,7 +18,7 @@
 <% end %>
 
 <br>
- <%= link_to "My Profile", user_path(@user) %>
+ <%= link_to "My Profile", user_path(@user), :class => 'ui button' %>
 
 <!-- <form class="ui form">
   <div class="field">
