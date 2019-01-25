@@ -1,21 +1,77 @@
-<header>
-  <nav>
-     <%= link_to "My Profile", user_path(@user) %>
-  </nav>
-</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href=<%= posts_path %>>Michelin Meals</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href= <%= posts_path %>> Community Blogs <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href= <%= new_post_path %>> Create New Post <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href= <%= user_path(@user) %>> My Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+
+
+
+
+
+
+
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<div style="position: absolute; right:200px">
+<%= form_tag '/logout', method: "post" do %>
+<%= submit_tag "Sign Out", :style => 'position: absolute; right: 5px; top: -40px' %>
+<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: absolute; right:200px">
+
+
+
 
 <h1>Hi <%= @user.username %>, here are all the posts from the Michelin Meals Community! </h1>
 
 <ul>
   <% @posts.all.each do |p| %>
-  <li>
-    <%= link_to p.title, post_path(p) %>
-  </li>
+  <br>
+  <p>
+    <%= link_to p.title, post_path(p), :class => 'ui button' %>
+  </p>
   <% end %>
 </ul>
 
-<div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
+
 
     <!-- <div class="ui container">
       <div class="ui large secondary inverted pointing menu">
@@ -30,16 +86,9 @@
       </div>
     </div> -->
 
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Michelin Meals
-      </h1>
-      <h2>Eat what you love.</h2>
-      <h3 color="white"><%= link_to "My Profile", user_path(@user) %></h3>
-    </div>
 
+
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0SPwwpruGIA?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/gBJjRYk0yC0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-
-
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/0SPwwpruGIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

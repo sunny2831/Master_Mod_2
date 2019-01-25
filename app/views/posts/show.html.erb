@@ -16,84 +16,88 @@
 
   </div>
 </nav>
-
-
-
-
-
-
-
-
 <div style="position: absolute; right:200px">
+<%= form_tag '/logout', method: "post" do %>
+<%= submit_tag "Sign Out", :style => 'position: absolute; right: 5px; top: -40px' %>
+<% end %>
+</div>
+
+
+
+
+
+
+
+<div style="position: absolute; right:500px">
 
 
 
 
   <h1> <%= @post.title %> </h1>
 
-  <p> <%= @post.recipe %> </p>
-
-  <div>
-    <img src="<%= @post.img_url %>" alt="" height="500" width="500">
-  </div>
-
-  <p> Recipe by <%= @post.user.username  %> </p>
-
-
-
-
-  <% @post.comments.each do |c| %>
-  <div class="ui comments">
-    <h3 class="ui dividing header">Comments</h3>
-    <div class="comment">
-      <a class="avatar">
-        <img src= <%= c.user.img_url %>>
-      </a>
-      <div class="content">
-        <a class="author"> <%= c.user.username %>  </a>
-        <div class="metadata">
-          <span class="date"> <%= Time.now.strftime('%c') %> </span>
-        </div>
-        <div class="text">
-          <%= c.content %>
-        </div>
-        <div class="actions">
-          <a class="reply">Reply</a>
-        </div>
-      </div>
+  <div style="width:600px; height:200px" >
+    <p> <%= @post.recipe %> </p>
+    <div>
+      <img src="<%= @post.img_url %>" alt="" height="500" width="500">
     </div>
-  <% end %>
 
-    <form class="ui reply form" action="/comments" method="post">
-      <div class="field">
-        <input type="text" name="content">
-        <!-- <textarea> -->
-        <input type="hidden" name="post_id" value= <%= @post.id %>>
+      <p> Recipe by <%= @post.user.username  %> </p>
 
 
 
 
-        <!-- </textarea> -->
+      <% @post.comments.each do |c| %>
+      <div class="ui comments">
+        <h3 class="ui dividing header">Comments</h3>
+        <div class="comment">
+          <a class="avatar">
+            <img src= <%= c.user.img_url %>>
+          </a>
+          <div class="content">
+            <a class="author"> <%= c.user.username %>  </a>
+            <div class="metadata">
+              <span class="date"> <%= Time.now.strftime('%c') %> </span>
+            </div>
+            <div class="text">
+              <%= c.content %>
+            </div>
+
+          </div>
+        </div>
+      <% end %>
+
+        <form class="ui reply form" action="/comments" method="post">
+          <div class="field">
+            <input type="text" name="content">
+            <!-- <textarea> -->
+            <input type="hidden" name="post_id" value= <%= @post.id %>>
+
+
+
+
+            <!-- </textarea> -->
+          </div>
+
+            <input type="submit" name="submit" value="Add Comment">
+
+
+        </form>
       </div>
 
-        <input type="submit" name="submit" value="Add Comment">
+      <% if flash[:message] %>
+        <%= flash[:message] %>
+      <% end %>
+      <div style="position: absolute; top:1200px; right:0px">
+        <h2>Send a private message to <%= @post.user.username %></h2>
+        <%= form_for @message do |f| %>
+          <%= f.text_area :content, :style => 'width:500px; height:150px' %>
+          <%= f.hidden_field :sender_id, :value => session[:id] %>
+          <%= f.hidden_field :receiver_id, :value => @post.user.id %>
+          <%= f.hidden_field :post_id, :value => @post.id %>
+          <%= f.submit %>
+        <% end %>
+      </div>
 
+    </div>
 
-    </form>
   </div>
-
-  <% if flash[:message] %>
-    <%= flash[:message] %>
-  <% end %>
-  <div style="position: absolute; top:1200px; right:0px">
-    <h2>Send a private message to <%= @post.user.username %></h2>
-    <%= form_for @message do |f| %>
-      <%= f.text_area :content, :style => 'width:500px; height:150px' %>
-      <%= f.hidden_field :sender_id, :value => session[:id] %>
-      <%= f.hidden_field :receiver_id, :value => @post.user.id %>
-      <%= f.hidden_field :post_id, :value => @post.id %>
-      <%= f.submit %>
-    <% end %>
-  </div>
-
-</div>

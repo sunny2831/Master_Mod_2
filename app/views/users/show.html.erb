@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href= <%= posts_path %>> See all posts <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href= <%= posts_path %>> Community Blogs <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href= <%= new_post_path %>> Create New Post <span class="sr-only">(current)</span></a>
@@ -27,18 +27,20 @@
 </nav>
 
 
-
-
-
-
-
-
 <div style="position: absolute; right:200px">
+<%= form_tag '/logout', method: "post" do %>
+<%= submit_tag "Sign Out", :style => 'position: absolute; right: 5px; top: -40px' %>
+<% end %>
+</div>
 
 
-  <%= form_tag '/logout', method: "post" do %>
-  <%= submit_tag "Sign Out", :style => 'position: absolute; right: 5px; top: -40px' %>
-  <% end %>
+
+
+
+<div style="position: absolute; right:500px">
+
+
+
 
 
 
