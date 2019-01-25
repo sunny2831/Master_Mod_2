@@ -82,21 +82,22 @@
 
 
         </form>
+        <% if flash[:message] %>
+          <%= flash[:message] %>
+        <% end %>
+        <!-- <div style="position: absolute; top:1200px; right:0px"> -->
+          <h2>Send a private message to <%= @post.user.username %></h2>
+          <%= form_for @message do |f| %>
+            <%= f.text_area :content, :style => 'width:500px; height:150px' %>
+            <%= f.hidden_field :sender_id, :value => session[:id] %>
+            <%= f.hidden_field :receiver_id, :value => @post.user.id %>
+            <%= f.hidden_field :post_id, :value => @post.id %>
+            <%= f.submit %>
+          <% end %>
+        <!-- </div> -->
       </div>
 
-      <% if flash[:message] %>
-        <%= flash[:message] %>
-      <% end %>
-      <div style="position: absolute; top:1200px; right:0px">
-        <h2>Send a private message to <%= @post.user.username %></h2>
-        <%= form_for @message do |f| %>
-          <%= f.text_area :content, :style => 'width:500px; height:150px' %>
-          <%= f.hidden_field :sender_id, :value => session[:id] %>
-          <%= f.hidden_field :receiver_id, :value => @post.user.id %>
-          <%= f.hidden_field :post_id, :value => @post.id %>
-          <%= f.submit %>
-        <% end %>
-      </div>
+
 
     </div>
 

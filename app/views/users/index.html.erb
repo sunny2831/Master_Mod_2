@@ -4,16 +4,16 @@
 <h2>Please Sign Up</h2>
 
 <%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.label :username, 'Choose your Username:' %>
+  <%= f.text_field :username, :style => 'position: absolute; right: 95px; top: 89px' %>
   <br>
   <br>
-  <%= f.label :img_url %>
-  <%= f.text_field :img_url %>
+  <%= f.label :img_url, 'Pick an Image URL:' %>
+  <%= f.text_field :img_url, :style => 'position: absolute; right: 95px; top: 137px'%>
   <br>
   <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.label :password, 'Choose your Password:' %>
+  <%= f.password_field :password, :style => 'position: absolute; right: 95px; top: 185px' %>
   <br>
   <br>
   <%= f.submit "Sign up" %>
