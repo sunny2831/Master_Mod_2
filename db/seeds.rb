@@ -33,11 +33,11 @@ comments = [
 ]
 
 users = [
- {username: "Aquaria", img_url: "https://i.pinimg.com/originals/0d/5f/33/0d5f332ec1b563c65b0e9ff274fe2b7a.jpg", password: "aquaria"},
- {username: "Jinxx Monsoon", img_url: "https://www.billboard.com/files/styles/article_main_image/public/media/Jinkx-Jose-Alberto-Guzman-Colon-2017-billboard-1548.jpg", password: "jinxx"},
- {username: "Violet Chachki", img_url: "https://i.pinimg.com/originals/1f/66/85/1f66857bd37bece8ffaf61953bd0a5aa.jpg", password:"violet"},
- {username: "Bianca Del Rio", img_url: "https://www.out.com/sites/out.com/files/2016/12/15/bianca.jpg", password: "bianca"},
- {username: "Bob", img_url: "https://upload.wikimedia.org/wikipedia/commons/5/50/Bob_The_Drag_Queen_at_Rupaul%27s_Dragcon_2017_by_dvsross.jpg", password: "bob"}
+ {username: "Aquaria", img_url: "https://i.redd.it/546j0c47pe511.jpg", password: "aquaria"},
+ {username: "Jinxx Monsoon", img_url: "https://i.pinimg.com/originals/32/9d/08/329d08a7d51822ed180c0cf217fb043a.jpg", password: "jinxx"},
+ {username: "Violet Chachki", img_url: "https://i.pinimg.com/originals/17/a2/ab/17a2aba9c15136a8597e04e0c0fa838d.jpg", password:"violet"},
+ {username: "Bianca Del Rio", img_url: "https://i.pinimg.com/originals/d1/41/ea/d141eab77bc082d3018d371637430590.jpg", password: "bianca"},
+ {username: "Bob", img_url: "https://i.pinimg.com/originals/bf/ea/bb/bfeabb25cd3512600ac42d7ccc799173.jpg", password: "bob"}
 ]
 
 
